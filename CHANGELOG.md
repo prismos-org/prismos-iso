@@ -37,3 +37,8 @@ CHANGELOG
 * Added the sudoers file.
 * Autologin into KDE Plasma using SDDM instead of autologin into TTY and then running "startplasma-wayland" from .bash_profile.
 * Enabled NetworkManager.service; full MAC randomization works by default now.
+
+==== June 29 2025 ====
+
+== CHANGES ==
+* PrismOS now has it's own repo hosted using codeberg pages!
