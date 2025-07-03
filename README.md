@@ -17,7 +17,7 @@ Prism OS is a privacy and security-focused Linux distribution based on Arch Linu
 1. Clone the repo:
 
    `bash
-   git clone https://github.com/prismos-org/prismos-arch
+   git clone https://github.com/prismos-org/prismos-iso
    `
 
 2. Build the ISO:
@@ -26,7 +26,7 @@ Prism OS is a privacy and security-focused Linux distribution based on Arch Linu
    mkarchiso \
      -w /path/to/work_dir \
      -o /path/to/out_dir \
-     /path/to/prismos-arch
+     /path/to/prismos-iso
    `
 
 3. For help:
@@ -47,11 +47,11 @@ Use the provided script:
 `
 # BIOS boot
 `
-./scripts/run_archiso.sh -i /path/to/prism-arch.iso
+./scripts/run_archiso.sh -i /path/to/iso
 `
 # UEFI boot
 `
-./scripts/run_archiso.sh -u -i /path/to/prism-arch.iso
+./scripts/run_archiso.sh -u -i /path/to/iso
 `
 
 ---
