@@ -1,12 +1,12 @@
-# Prism OS — Arch Flavor (WIP)
+# Prism OS
 
-Prism OS (Arch Flavor) is a privacy and security-focused Linux distribution based on Arch Linux.  
+Prism OS is a privacy and security-focused Linux distribution based on Arch Linux.  
 
 ---
 
 ## Table of Contents
 
-- [Building the Arch ISO](#building-the-arch-iso)  
+- [Building the ISO](#building-the-arch-iso)  
 - [Testing the ISO](#testing-the-iso)  
 - [License](#license)  
 
