@@ -129,27 +129,11 @@ linux-atm
 linux-firmware
 linux-firmware-marvell
 
-# TOR
-tor
-torsocks
-onionshare
-
-# ENCRYPTED MESSENGERS
-gajim
-signal-desktop
-
-# PGP HELPER
-kleopatra
+# Memory allocator
+hardened-malloc
 
 # Browser
-librewolf-bin
-
-# WALLETS
-electrum
-#featherwallet
-
-# Password Manager
-keepassxc
+mullvad-browser-bin
 
 # TERMINAL
 kitty
@@ -160,4 +144,5 @@ sddm
 
 # INSTALLER
 #calamares
+
 
