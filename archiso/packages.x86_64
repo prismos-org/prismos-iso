@@ -130,7 +130,7 @@ linux-firmware
 linux-firmware-marvell
 
 # Bubblewrap
-bubblewrap-suid 
+bubblewrap-suid
 
 # Memory allocator
 hardened-malloc
