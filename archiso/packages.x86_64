@@ -129,6 +129,9 @@ linux-atm
 linux-firmware
 linux-firmware-marvell
 
+# Bubblewrap
+bubblewrap-suid 
+
 # Memory allocator
 hardened-malloc
 
