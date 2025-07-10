@@ -132,6 +132,9 @@ linux-firmware-marvell
 # Bubblewrap
 bubblewrap-suid
 
+# Apparmor
+apparmor
+
 # Memory allocator
 hardened-malloc
 
