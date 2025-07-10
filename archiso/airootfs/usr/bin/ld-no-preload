@@ -1,2 +1,4 @@
+# Prism OS
+
 #!/bin/bash
-bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload "${@}"
+bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload --new-session "${@}"
