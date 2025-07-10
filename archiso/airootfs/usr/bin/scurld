@@ -1,0 +1,5 @@
+# Prism OS
+#!/bin/bash
+
+# Protects against https downgrade attacks.
+scurl --location --remote-name-all --remote-header-name "$@"

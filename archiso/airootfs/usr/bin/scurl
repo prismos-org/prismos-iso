@@ -1,0 +1,5 @@
+# Prism OS
+# scurl: Adds "--tlsv1.3 --proto https" in front of all invocations of "curl" when running "scurl".
+
+#!/bin/bash
+curl --tlsv1.3 --proto https "$@"   
