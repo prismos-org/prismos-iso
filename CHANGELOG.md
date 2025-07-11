@@ -43,10 +43,11 @@ CHANGELOG
 == CHANGES ==
 * Prism OS now has it's own repo hosted using codeberg pages!
 
-==== - ====
+==== June 30 - July 10 ====
 
 == CHANGES ==
 * Replaced librewolf with mullvad browser.
 * Use Hardened malloc by default.
 * Add scurl (secure curl) and scurld (secure curl download) scripts.
 * Added apparmor and bwrap.
+

@@ -119,26 +119,20 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
-
-## PRISM OS
-
-# KERNEL
-linux-hardened
-linux-hardened-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
 
-# Bubblewrap
+## PRISM OS
+
+# HARDENING
+linux-hardened
+linux-hardened-headers
 bubblewrap-suid
-
-# Apparmor
 apparmor
-
-# Memory allocator
 hardened-malloc
-
-# Browser
+pambase
+# BROWSER
 mullvad-browser-bin
 
 # TERMINAL
