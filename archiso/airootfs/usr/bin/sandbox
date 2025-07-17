@@ -50,6 +50,7 @@ BWRAP_OPTS=(
     --setenv XDG_RUNTIME_DIR "$XDG_RUNTIME_DIR"
     --setenv XDG_SESSION_TYPE "$XDG_SESSION_TYPE"
     --unshare-ipc
+    --unshare-user
     --unshare-pid
     --unshare-uts
     --unshare-cgroup

@@ -38,6 +38,7 @@ BWRAP_OPTS=(
     --tmpfs /tmp \
     --tmpfs /run \
     --unshare-ipc
+    --unshare-user
     --unshare-pid
     --unshare-uts
     --unshare-cgroup

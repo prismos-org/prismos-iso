@@ -51,3 +51,14 @@ CHANGELOG
 * Add scurl (secure curl) and scurld (secure curl download) scripts.
 * Added apparmor and bwrap.
 
+
+==== July 13 - July 17 ====
+* Harden the system using various kernel arguments and sysctl values.
+* USB attack mitigation has been added. USB devices are not auto mounted now. Use the tool "pusbctl".
+* Added wrapper scripts around curl and wget (scurl, scurld, scurlt and swget). See the respective scripts located In /usr/bin for more info.
+* Programs ran using ld-no-preload are sandboxed way better now. For example, any program ran using ld-no-preload can not escalate to root.
+* WIP sandbox script which aims to completely sandbox a program mainly meant to be used for untrusted applications (It's not for running virus or malware!).
+* Added a plymouth theme.
+* Change the machine-id to a generic one (Used by whonix).
+* Use chronyd 
+* Replaced the default NTP with chronyd.
