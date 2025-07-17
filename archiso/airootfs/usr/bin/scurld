@@ -1,5 +1,5 @@
-# Prism OS
-#!/bin/bash
+# Prism OS <nexus at tuta dot io>
 
+#!/bin/bash
 # Protects against https downgrade attacks.
 scurl --location --remote-name-all --remote-header-name "$@"

@@ -59,6 +59,7 @@ mdadm
 memtest86+
 memtest86+-efi
 mkinitcpio
+mmc-utils
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
 modemmanager
@@ -128,21 +129,26 @@ linux-firmware-marvell
 # HARDENING
 linux-hardened
 linux-hardened-headers
+lkrg-dkms
+hardened-malloc
 bubblewrap-suid
 apparmor
-hardened-malloc
-pambase
+
+# PLYMOUTH
+plymouth
+
 # BROWSER
 mullvad-browser-bin
 
 # TERMINAL
 kitty
 
-# DE
+# DE & LOGIN MANAGER
 plasma
 sddm
 
 # INSTALLER
 #calamares
 
-
+chrony
+pusbctl

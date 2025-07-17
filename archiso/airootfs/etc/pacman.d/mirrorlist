@@ -1,0 +1,14 @@
+## Switzerland mirrors.
+## https://archlinux.org/mirrorlist/?country=CH&protocol=https&ip_version=4&use_mirror_status=on
+
+Server = https://theswissbay.ch/archlinux/$repo/os/$arch
+Server = https://pkg.adfinis-on-exoscale.ch/archlinux-pkgbuild/$repo/os/$arch
+Server = https://mirror.init7.net/archlinux/$repo/os/$arch
+Server = https://mirror.hb9hil.org/archlinux/$repo/os/$arch
+Server = https://mirror.puzzle.ch/archlinux/$repo/os/$arch
+Server = https://mirror.worldhotspot.org/archlinux/$repo/os/$arch
+Server = https://mirror.ungleich.ch/mirror/packages/archlinux/$repo/os/$arch
+Server = https://pkg.adfinis-on-exoscale.ch/archlinux/$repo/os/$arch
+Server = https://ch.mirrors.cicku.me/archlinux/$repo/os/$arch
+Server = https://mirror.metanet.ch/archlinux/$repo/os/$arch
+Server = https://pkg.adfinis.com/archlinux/$repo/os/$arch

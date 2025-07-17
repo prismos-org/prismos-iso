@@ -1,8 +1,9 @@
 # Prism OS <nexus at tuta dot io>
+# Inspired from sandbox-app-launcher (kicksecure). WIP.
 #!/bin/bash
 
-# This script binds ld-no-preload to /dev/null/ and sandboxes the specified application as well. 
-# It is better to sandbox an application which does not support hardened malloc rather than to run It with LD_PRELOAD= <command>.
+# This script sandboxes an application using bwrap.
+# The sandbox directory at located In $HOME/sandbox. A sub directory for each application run Is created which acts as the $HOME directory for the respective command.
 # Usage: ./sandbox.sh <application> [args...]
 
 if [ "$EUID" -eq 0 ]; then
@@ -13,8 +14,10 @@ if [ $# -lt 1 ]; then
     echo "Usage: $0 <application> [args...]"
     exit 1
 fi
-
 APP_NAME=$(basename "$1")
+SANDBOX_DIR="$HOME/sandbox/$APP_NAME"
+mkdir -p "$SANDBOX_DIR"
+
 if [ -x "$1" ]; then
     APP_PATH="$1"
 else
@@ -24,6 +27,7 @@ else
         exit 1
     fi
 fi
+
 shift
 BWRAP_OPTS=(
     --ro-bind /usr /usr
@@ -32,16 +36,12 @@ BWRAP_OPTS=(
     --ro-bind /lib64 /lib64
     --ro-bind /sbin /sbin
     --ro-bind /etc /etc
-    --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload
     --proc /proc
     --dev /dev
     --tmpfs /tmp \
     --tmpfs /run \
-    --unshare-ipc
-    --unshare-pid
-    --unshare-uts
-    --unshare-cgroup
-    --unshare-cgroup-try
+    --bind "$SANDBOX_DIR" "$HOME"
+    --chdir "$HOME"
     --clearenv
     --setenv HOME "$HOME"
     --setenv PATH "$PATH"
@@ -49,6 +49,12 @@ BWRAP_OPTS=(
     --setenv TERM "$TERM"
     --setenv XDG_RUNTIME_DIR "$XDG_RUNTIME_DIR"
     --setenv XDG_SESSION_TYPE "$XDG_SESSION_TYPE"
+    --unshare-ipc
+    --unshare-pid
+    --unshare-uts
+    --unshare-cgroup
+    --unshare-cgroup-try
+    #--unshare-net
     # Start a new session (Don't ommit this!)
     --new-session
     --die-with-parent

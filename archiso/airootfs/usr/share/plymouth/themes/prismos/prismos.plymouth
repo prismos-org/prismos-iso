@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=prismos
+Description=Default plymouth theme of Prism OS
+Comment=Author: nexus   
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/prismos
+ScriptFile=/usr/share/plymouth/themes/prismos/prismos.script

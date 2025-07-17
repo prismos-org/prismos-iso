@@ -21,7 +21,10 @@ file_permissions=(
   ["/root"]="0:0:750"
   ["/root/.automated_script.sh"]="0:0:755"
   ["/root/.gnupg"]="0:0:700"
-  ["/usr/local/bin/choose-mirror"]="0:0:755"
-  ["/usr/local/bin/Installation_guide"]="0:0:755"
-  ["/usr/local/bin/livecd-sound"]="0:0:755"
+  ["/usr/bin/ld-no-preload"]="0:0:755"
+  ["/usr/bin/scurl"]="0:0:755"
+  ["/usr/bin/scurld"]="0:0:755"
+  ["/usr/bin/scurlt"]="0:0:755"
+  ["/usr/bin/swget"]="0:0:755"
+  ["/usr/bin/sandbox"]="0:0:755"
 )
