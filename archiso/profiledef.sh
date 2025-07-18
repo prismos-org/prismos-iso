@@ -27,4 +27,5 @@ file_permissions=(
   ["/usr/bin/scurlt"]="0:0:755"
   ["/usr/bin/swget"]="0:0:755"
   ["/usr/bin/sandbox"]="0:0:755"
+  ["/etc/NetworkManager/dispatcher.d/no-wait.d/01-no-send-hostname.sh"]="0:0:744"
 )

@@ -64,6 +64,6 @@ CHANGELOG
 * Replaced the default NTP with chronyd.
 
 ==== July 18 ====
-* Unique DUID per connection
-* Script to not send out hostname of the machine to the DHCP server. It does not send your hostname from the second connection and this setting Is disabled for networks for which you have disabled MAC adress randomization. It's still a good pracctice to set your hostname to a generic one like "localhost".
-* Fix pacman configurations.
+*
+*
+*

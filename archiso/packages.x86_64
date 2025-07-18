@@ -1,7 +1,5 @@
 alsa-utils
 amd-ucode
-arch-install-scripts
-archinstall
 b43-fwcutter
 base
 bcachefs-tools
@@ -13,6 +11,8 @@ btrfs-progs
 clonezilla
 cloud-init
 cryptsetup
+archlinux-keyring
+prismos-keyring
 darkhttpd
 ddrescue
 dhcpcd
@@ -152,3 +152,5 @@ sddm
 
 chrony
 pusbctl
+prismos-keyring
+tor
