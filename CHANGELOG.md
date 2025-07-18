@@ -67,3 +67,5 @@ CHANGELOG
 * Unique DUID per connection
 * Script to not send out hostname of the machine to the DHCP server. It does not send your hostname from the second connection and this setting Is disabled for networks for which you have disabled MAC adress randomization. It's still a good pracctice to set your hostname to a generic one like "localhost".
 * Fix pacman configurations.
+* GNOME Is now the default DE (https://privsec.dev/posts/linux/choosing-your-desktop-linux-distribution/#desktop-environments). Also this means that there Is much less bloat as compared to PLASMA.
+* Remove sysctl values which are already being enforced by the hardened-kernel.

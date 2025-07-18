@@ -144,7 +144,7 @@ mullvad-browser-bin
 kitty
 
 # DE & LOGIN MANAGER
-plasma
+gnome
 sddm
 
 # INSTALLER
