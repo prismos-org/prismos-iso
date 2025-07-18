@@ -1,6 +1,6 @@
 # Prism OS
 
-Prism OS is a privacy and security-focused Linux distribution based on Arch Linux.  
+Prism OS is a security-focused Linux distribution based on Arch Linux.  
 
 ---
 
