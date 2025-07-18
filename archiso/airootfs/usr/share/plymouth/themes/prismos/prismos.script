@@ -1,46 +1,34 @@
-// Global variables for screen dimensions
+// Author: nexus <nexus-x[at]tuta[dot]io>
+// Plymouth theme of Prism OS
+
 screen_width = Window.GetWidth();
 screen_height = Window.GetHeight();
 screen_half_width = screen_width / 2;
 screen_half_height = screen_height / 2;
 
-// Initialize images and sprites
 logo_image = Image("logo.png"); // 128x128
 logo_sprite = Sprite(logo_image);
-logo_sprite.SetX(screen_half_width - logo_image.GetWidth() / 2);  // Center logo horizontally (screen_half_width - 64)
-logo_sprite.SetY(screen_half_height - logo_image.GetHeight() / 2); // Center logo vertically (screen_half_height - 64)
+logo_sprite.SetX(screen_half_width - logo_image.GetWidth() / 2);
+logo_sprite.SetY(screen_half_height - logo_image.GetHeight() / 2);
 
-shutimg_image = Image("logo.png"); // 128x128
+shutimg_image = Image("logo.png");
 shutimg_sprite = Sprite(shutimg_image);
-shutimg_sprite.SetX(screen_half_width - shutimg_image.GetWidth() / 2); // Center shutdown image
+shutimg_sprite.SetX(screen_half_width - shutimg_image.GetWidth() / 2);
 shutimg_sprite.SetY(screen_half_height - shutimg_image.GetHeight() / 2);
 
-// Initialize bullet sprites (max 20 for password input)
-bullet_image = Image.Text("*", 1, 1, 1); // Use text-based bullet (adjust if using custom image)
-bullets = [];
-for (i = 0; i < bullets; i++) {
-    bullets[i] = Sprite(bullet_image);
-    bullets[i].SetOpacity(0); // Hide initially
-}
-
-// Initialize other sprites
 prompt_sprite = Sprite();
-question_sprite = Sprite();
-answer_sprite = Sprite();
 message_sprite = Sprite();
 
-// Progress bar and box for boot/resume
 if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume") {
     progress_box_image = Image("progress_box.png"); // 150x4
-    progress_box_sprite = Sprite(progress_box_image);
+    progress_box_sprite = Sprite(progress_box_image); // 150x4
     
-    progress_bar_original_image = Image("progress_bar.png"); // 150x4
+    progress_bar_original_image = Image("progress_bar.png");
     progress_bar_current_image = progress_bar_original_image.Scale(0, progress_bar_original_image.GetHeight());
     progress_bar_sprite = Sprite(progress_bar_current_image);
 
-    // Position progress bar/box 10px below logo bottom
-    progress_x = screen_half_width - progress_box_image.GetWidth() / 2; // Center (screen_half_width - 75)
-    progress_y = screen_half_height + logo_image.GetHeight() / 2 + 10; // 10px below logo (screen_half_height + 74)
+    progress_x = screen_half_width - progress_box_image.GetWidth() / 2;
+    progress_y = screen_half_height + logo_image.GetHeight() / 2 + 10;
 
     progress_box_sprite.SetX(progress_x);
     progress_box_sprite.SetY(progress_y);
@@ -48,7 +36,6 @@ if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume") {
     progress_bar_sprite.SetX(progress_x);
     progress_bar_sprite.SetY(progress_y);
 
-    // Progress callback
     fun progress_callback(duration, progress) {
         if (progress_bar_current_image.GetWidth() != Math.Int(progress_bar_original_image.GetWidth() * progress)) {
             progress_bar_current_image = progress_bar_original_image.Scale(
@@ -61,74 +48,30 @@ if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume") {
     Plymouth.SetBootProgressFunction(progress_callback);
 }
 
-// Password question callback
 fun DisplayQuestionCallback(prompt, entry) {
-    // Hide password prompt and bullets
     prompt_sprite.SetOpacity(0);
-    for (i = 0; i < max_bullets; i++) {
-        bullets[i].SetOpacity(0);
-    }
-
-    // Set question text
-    if (entry == "") {
-        entry = "<answer>";
-    }
-    question_sprite.SetImage(Image.Text(prompt, 1, 1, 1));
-    question_sprite.SetX(screen_half_width - question_sprite.GetImage().GetWidth() / 2); // Center horizontally
-    question_sprite.SetY(screen_half_height + logo_image.GetHeight() / 2 + 20); // 20px below logo (screen_half_height + 84)
-    question_sprite.SetOpacity(1);
-
-    // Set answer text
-    answer_sprite.SetImage(Image.Text(entry, 1, 1, 1));
-    answer_sprite.SetX(screen_half_width - answer_sprite.GetImage().GetWidth() / 2); // Center horizontally
-    answer_sprite.SetY(screen_half_height + logo_image.GetHeight() / 2 + 40); // 40px below logo (screen_half_height + 104)
-    answer_sprite.SetOpacity(1);
+    prompt_sprite.SetImage(Image.Text("ENTER YOUR PASSWORD", 1, 0, 0));
+    prompt_sprite.SetX(10);
+    prompt_sprite.SetY(10);
+    prompt_sprite.SetOpacity(1);
 }
 Plymouth.SetDisplayQuestionFunction(DisplayQuestionCallback);
 
-// Password prompt callback
 fun DisplayPasswordCallback(nil, bulletCount) {
     state.status = "pause";
-    
-    // Hide question and answer
-    question_sprite.SetOpacity(0);
-    answer_sprite.SetOpacity(0);
-
-    // Set prompt
-    prompt_sprite.SetImage(Image.Text("Enter Password", 1, 1, 1));
-    prompt_sprite.SetX(screen_half_width - prompt_sprite.GetImage().GetWidth() / 2); // Center horizontally
-    prompt_sprite.SetY(screen_half_height + logo_image.GetHeight() / 2 + 20); // 20px below logo (screen_half_height + 84)
+    prompt_sprite.SetImage(Image.Text("ENTER YOUR PASSWORD", 1, 0, 0));
+    prompt_sprite.SetX(10);
+    prompt_sprite.SetY(10);
     prompt_sprite.SetOpacity(1);
-
-    // Position bullets
-    totalWidth = bulletCount * bullet_image.GetWidth();
-    startPos = screen_half_width - totalWidth / 2;
-    for (i = 0; i < max_bullets; i++) {
-        if (i < bulletCount) {
-            bullets[i].SetX(startPos + i * bullet_image.GetWidth());
-            bullets[i].SetY(screen_half_height + logo_image.GetHeight() / 2 + 40); // 40px below logo (screen_half_height + 104)
-            bullets[i].SetOpacity(1);
-        } else {
-            bullets[i].SetOpacity(0); // Hide unused bullets
-        }
-    }
 }
 Plymouth.SetDisplayPasswordFunction(DisplayPasswordCallback);
 
-// Normal display callback
 fun DisplayNormalCallback() {
     state.status = "play";
-    // Hide all custom sprites
     prompt_sprite.SetOpacity(0);
-    question_sprite.SetOpacity(0);
-    answer_sprite.SetOpacity(0);
-    for (i = 0; i < max_bullets; i++) {
-        bullets[i].SetOpacity(0);
-    }
 }
 Plymouth.SetDisplayNormalFunction(DisplayNormalCallback);
 
-// Message callback
 fun MessageCallback(text) {
     message_sprite.SetImage(Image.Text(text, 1, 1, 1));
     message_sprite.SetPosition(screen_half_width - message_sprite.GetImage().GetWidth() / 2, message_sprite.GetImage().GetHeight());
