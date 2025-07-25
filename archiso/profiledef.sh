@@ -21,11 +21,11 @@ file_permissions=(
   ["/root"]="0:0:750"
   ["/root/.automated_script.sh"]="0:0:755"
   ["/root/.gnupg"]="0:0:700"
-  ["/usr/bin/ld-no-preload"]="0:0:755"
+  ["/etc/ld.no.preload"]="0:0:600"
   ["/usr/bin/scurl"]="0:0:755"
   ["/usr/bin/scurld"]="0:0:755"
   ["/usr/bin/scurlt"]="0:0:755"
   ["/usr/bin/swget"]="0:0:755"
-  ["/usr/bin/sandbox"]="0:0:755"
+  ["/usr/bin/iso-init"]="0:0:755"
   ["/etc/NetworkManager/dispatcher.d/no-wait.d/01-no-send-hostname.sh"]="0:0:744"
 )

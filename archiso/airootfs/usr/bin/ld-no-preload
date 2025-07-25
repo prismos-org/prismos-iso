@@ -1,9 +1,9 @@
 # Prism OS <nexus at tuta dot io>
 #!/bin/bash
 
-# This script binds ld-no-preload to /dev/null/ and sandboxes the specified application as well. 
+# This script binds ld-no-preload to /dev/null/ and sandboxes the specified application as well.
 # It is better to sandbox an application which does not support hardened malloc rather than to run It with LD_PRELOAD= <command>.
-# Usage: ./sandbox.sh <application> [args...]
+# Usage: ld-no-preload <application> [args...]
 
 if [ "$EUID" -eq 0 ]; then
   echo "Do not run as root."
@@ -36,13 +36,11 @@ BWRAP_OPTS=(
     --proc /proc
     --dev /dev
     --tmpfs /tmp \
-    --tmpfs /run \
     --unshare-ipc
-    --unshare-user
-    --unshare-pid
-    --unshare-uts
+    --unshare-pid 
+    --unshare-uts 
+    --unshare-user 
     --unshare-cgroup
-    --unshare-cgroup-try
     --clearenv
     --setenv HOME "$HOME"
     --setenv PATH "$PATH"

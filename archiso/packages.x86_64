@@ -1,3 +1,6 @@
+hardened-malloc
+findutils
+coreutils
 alsa-utils
 amd-ucode
 b43-fwcutter
@@ -10,9 +13,9 @@ broadcom-wl
 btrfs-progs
 clonezilla
 cloud-init
-cryptsetup
 archlinux-keyring
 prismos-keyring
+cryptsetup
 darkhttpd
 ddrescue
 dhcpcd
@@ -51,7 +54,6 @@ libusb-compat
 livecd-sounds
 lsscsi
 lvm2
-lynx
 man-db
 man-pages
 mc
@@ -98,7 +100,6 @@ sg3_utils
 smartmontools
 sof-firmware
 squashfs-tools
-sudo
 syslinux
 systemd-resolvconf
 tcpdump
@@ -112,7 +113,6 @@ usb_modeswitch
 usbmuxd
 usbutils
 vim
-virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
 wireless_tools
@@ -120,36 +120,24 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
-linux-atm
-linux-firmware
-linux-firmware-marvell
 
 ## PRISM OS
 
-# HARDENING
 linux-hardened
 linux-hardened-headers
-lkrg-dkms
-hardened-malloc
+linux-firmware
 bubblewrap-suid
 apparmor
-
-# PLYMOUTH
-plymouth
-
-# BROWSER
-mullvad-browser-bin
-
-# TERMINAL
-kitty
-
-# DE & LOGIN MANAGER
-gnome
-sddm
-
-# INSTALLER
-#calamares
-
 chrony
 pusbctl
+plymouth
+mullvad-browser
+networkmanager
 tor
+gnome
+sddm
+pipewire
+wireplumber
+pavucontrol
+firewalld
+#calamares
