@@ -21,7 +21,6 @@ file_permissions=(
   ["/root"]="0:0:750"
   ["/root/.automated_script.sh"]="0:0:755"
   ["/root/.gnupg"]="0:0:700"
-  ["/etc/ld.no.preload"]="0:0:600"
   ["/usr/bin/scurl"]="0:0:755"
   ["/usr/bin/scurld"]="0:0:755"
   ["/usr/bin/scurlt"]="0:0:755"
