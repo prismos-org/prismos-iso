@@ -25,6 +25,7 @@ file_permissions=(
   ["/usr/bin/scurld"]="0:0:755"
   ["/usr/bin/scurlt"]="0:0:755"
   ["/usr/bin/swget"]="0:0:755"
+  ["/usr/bin/spreload"]="0:0:755"
   ["/usr/bin/iso-init"]="0:0:755"
   ["/etc/NetworkManager/dispatcher.d/no-wait.d/01-no-send-hostname.sh"]="0:0:744"
 )

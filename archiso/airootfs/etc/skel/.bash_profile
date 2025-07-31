@@ -1,1 +1,5 @@
-[[ -f ~/.bashrc ]] && ~/.bashrc
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

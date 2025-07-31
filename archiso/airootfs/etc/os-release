@@ -1,7 +1,9 @@
 NAME="Prism OS"
 PRETTY_NAME="Prism OS"
-ID=arch
+ID=prismos
+ID_LIKE=arch
 BUILD_ID=rolling
-ANSI_COLOR="38;2;23;147;209"
-BUG_REPORT_URL="https://github.com/prismos-org/prismos-os/issues"
-LOGO=prismos-logo
+ANSI_COLOR="38;2;255;255;255"
+VENDOR_NAME="Prism OS"
+VENDOR_URL="https://github.com/prismos-org"
+BUG_REPORT_URL="https://github.com/prismos-org/prismos-iso/issues"

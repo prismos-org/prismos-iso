@@ -64,7 +64,6 @@ mkinitcpio
 mmc-utils
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
-modemmanager
 mtools
 nano
 nbd
@@ -112,7 +111,6 @@ udftools
 usb_modeswitch
 usbmuxd
 usbutils
-vim
 vpnc
 wireless-regdb
 wireless_tools
@@ -135,9 +133,12 @@ mullvad-browser
 networkmanager
 tor
 gnome
-sddm
 pipewire
 wireplumber
 pavucontrol
 firewalld
+keepassxc
+kleopatra
+monero-gui
+libpwquality
 #calamares

@@ -1,0 +1,13 @@
+[org/gnome/shell]
+allow-extension-installation=false
+favorite-apps=['mullvad-browser.desktop', 'org.gnome.Nautilus.desktop']
+enabled-extensions=[]
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+font-antialiasing='rgba'
+monospace-font-name='Monospace 12'
+
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/gnome/map-d.svg'
+picture-uri-dark='file:///usr/share/backgrounds/gnome/map-l.svg'
