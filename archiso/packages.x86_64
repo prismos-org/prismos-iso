@@ -58,8 +58,6 @@ man-db
 man-pages
 mc
 mdadm
-memtest86+
-memtest86+-efi
 mkinitcpio
 mmc-utils
 mkinitcpio-archiso
@@ -141,4 +139,6 @@ keepassxc
 kleopatra
 monero-gui
 libpwquality
+hardened-configs
+prismos-plymouth-theme
 #calamares

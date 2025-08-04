@@ -1,6 +1,6 @@
 [org/gnome/shell]
 allow-extension-installation=false
-favorite-apps=['mullvad-browser.desktop', 'org.gnome.Nautilus.desktop']
+#favorite-apps=['mullvad-browser.desktop', 'org.gnome.Nautilus.desktop', "< >", "< >"]
 enabled-extensions=[]
 
 [org/gnome/desktop/interface]
