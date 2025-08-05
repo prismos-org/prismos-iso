@@ -43,7 +43,7 @@ main() {
     systemctl set-default multi-user.target
     rm "/var/log/pacman.log"
     rm -rf "/var/cache/pacman/pkg/"
-    files=("/usr/bin/chsh" "/usr/bin/chfn" "/usr/bin/pkexec" "/usr/bin/sudo" "/usr/bin/su" "/usr/bin/ksu" "/usr/bin/sg" "/usr/share/applications/gnome-online-accounts-panel.desktop" "qv4l2.desktop" "qvidcap.desktop" "google-maps-geo-handler.desktop")
+    files=("/usr/bin/chsh" "/usr/bin/chfn" "/usr/bin/pkexec" "/usr/bin/sudo" "/usr/bin/su" "/usr/bin/ksu" "/usr/bin/sg" "/usr/share/applications/gnome-online-accounts-panel.desktop" "/usr/share/applications/qv4l2.desktop" "/usr/share/applications/qvidcap.desktop" "/usr/share/applications/google-maps-geo-handler.desktop")
     for file in "${files[@]}"; do
         rm -f "$file"
     done

@@ -137,8 +137,7 @@ pavucontrol
 firewalld
 keepassxc
 kleopatra
-monero-gui
 libpwquality
-hardened-configs
+hardened-configs-prismos
 prismos-plymouth-theme
 #calamares
