@@ -1,0 +1,25 @@
+# Copyright (C) 2025 Prism OS Authors
+#
+# This file is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this file.  If not, see <https://www.gnu.org/licenses/>.
+
+[org.gnome.shell]
+favorite-apps=['mullvad-browser.desktop', 'org.keepassxc.KeePassXC.desktop', 'org.kde.kleopatra.desktop', 'org.gnome.Nautilus.desktop']
+enabled-extensions=[]
+
+[org.gnome.desktop.interface]
+color-scheme='prefer-dark'
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/gnome/glass-chip-l.jxl'
+picture-uri-dark='file:///usr/share/backgrounds/gnome/glass-chip-d.jxl'

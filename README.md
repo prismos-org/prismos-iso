@@ -12,8 +12,9 @@ Prism OS is a security-focused Linux distribution based on Arch Linux.
 
 ---
 
-## Building the Arch ISO
+## Building the ISO
 
+NOTE: Do not use the 'mkarchiso' installed from the package rather use the one provided in `scripts/`.
 1. Clone the repo:
 
    `bash
@@ -58,4 +59,10 @@ Use the provided script:
 
 ## License
 
-This project is licensed under **GPL-3.0-or-later**. 
+This project is licensed under the GNU General Public License v3.0 (GPLv3).
+See the [LICENSE](./LICENSE) file for details.
+
+**Notice:**
+Some configurations in this repository are derived from or inspired by the [secureblue](https://github.com/secureblue/secureblue) and [GrapheneOS](https://github.com/GrapheneOS) projects.
+Original authors and contributors retain their respective copyrights.
+All modifications and additions are licensed under GPLv3 unless otherwise noted.

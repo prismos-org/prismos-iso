@@ -12,7 +12,6 @@ brltty
 broadcom-wl
 btrfs-progs
 clonezilla
-cloud-init
 archlinux-keyring
 prismos-keyring
 cryptsetup
@@ -122,7 +121,7 @@ xl2tpd
 linux-hardened
 linux-hardened-headers
 linux-firmware
-bubblewrap-suid
+bubblewrap
 apparmor
 chrony
 pusbctl
@@ -138,6 +137,6 @@ firewalld
 keepassxc
 kleopatra
 libpwquality
-hardened-configs-prismos
+kitty
 prismos-plymouth-theme
 #calamares
