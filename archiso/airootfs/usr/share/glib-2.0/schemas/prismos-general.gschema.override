@@ -20,6 +20,7 @@
  */
 
 [org.gnome.shell]
+allow-extension-installation=false
 favorite-apps=['mullvad-browser.desktop', 'org.keepassxc.KeePassXC.desktop', 'org.kde.kleopatra.desktop', 'org.gnome.Nautilus.desktop']
 enabled-extensions=[]
 
