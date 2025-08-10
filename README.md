@@ -63,6 +63,6 @@ This project is licensed under the GNU General Public License v3.0 (GPLv3).
 See the [LICENSE](./LICENSE) file for details.
 
 **Notice:**
-Some configurations in this repository are derived from or inspired by the [secureblue](https://github.com/secureblue/secureblue) and [GrapheneOS](https://github.com/GrapheneOS) projects.
+Some configurations in this repository are derived from or inspired by the [secureblue](https://github.com/secureblue/secureblue), [GrapheneOS](https://github.com/GrapheneOS) and [Privsec](https://privsec.dev) projects.
 Original authors and contributors retain their respective copyrights.
 All modifications and additions are licensed under GPLv3 unless otherwise noted.
