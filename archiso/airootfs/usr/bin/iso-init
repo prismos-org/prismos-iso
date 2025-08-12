@@ -79,7 +79,7 @@ __main() {
     __set_caps "cap_dac_read_search,cap_audit_write=ep" "/usr/bin/chage"
     __set_caps "cap_sys_admin=ep" "/usr/bin/fusermount3"
     __set_caps "cap_dac_read_search,cap_audit_write=ep" "/usr/bin/unix_chkpwd"
-    glib-compile-schemas /usr/share/glib-2.0/schemas/
+    glib-compile-schemas /usr/share/glib-2.0/schemas
 }
 __main
 rm -f "$0"
